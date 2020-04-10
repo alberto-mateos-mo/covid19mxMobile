@@ -1,0 +1,13 @@
+name: covid19mxMobile
+title: covid19mxMobile
+username:
+account: davidmateos
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2093245
+bundleId: 2995063
+url: https://davidmateos.shinyapps.io/covid19mxMobile/
+when: 1586496435.13609
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: casos_positivos.pdf|dev/01_start.R|dev/02_dev.R|dev/03_deploy.R|dev/run_dev.R

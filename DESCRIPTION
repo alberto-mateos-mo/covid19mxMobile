@@ -1,0 +1,30 @@
+Package: covid19mxMobile
+Title: covid19mxMobile
+Version: 0.0.0.9000
+Authors@R: person('David', 'Mateos', email = 'cldav.privmath@gmail.com', role = c('cre', 'aut'))
+Description: Same app as covid19mx but the app is improved for mobile phones.
+License: CCBY-4.0
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    shiny,
+    golem,
+    processx,
+    attempt,
+    DT,
+    glue,
+    htmltools,
+    shinyMobile,
+    scales,
+    plotly,
+    ggplot2,
+    dplyr,
+    janitor,
+    lubridate,
+    leaflet,
+    pkgload
+RoxygenNote: 7.0.2
+URL: https://github.com/alberto-mateos-mo/covid19mxMobile
+BugReports: https://github.com/alberto-mateos-mo/covid19mxMobile/issues
+Suggests: 
+    testthat
