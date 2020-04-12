@@ -1,0 +1,1 @@
+["{\n  \"name\": \"mcovid19MX\",\n  \"short_name\": \"mcovid19MX\",\n  \"description\": \"What it does!\",\n  \"lang\": \"en-US\",\n  \"start_url\": \"https://davidmateos.shinyapps.io/covid19mxMobile/\",\n  \"display\": \"minimal-ui\",\n  \"icons\": [\n    {\n      \"src\": \"icons/covid19mx.png\",\n      \"sizes\": \"128x128\",\n      \"types\": \"image/png\"\n    }\n  ]\n}"]

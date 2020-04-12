@@ -7,7 +7,7 @@
 \usage{
 mod_indicadores_ui(id)
 
-mod_indicadores_server(input, output, session)
+mod_indicadores_server(input, output, session, react)
 }
 \arguments{
 \item{id}{shiny id}

@@ -50,6 +50,7 @@ golem::use_recommended_deps()
 
 # If you want to change the favicon (default is golem's one)
 golem::remove_favicon()
+golem::use_favicon("www/splashscreens/covid19mx.png")
 
 # Add helper functions 
 golem::use_utils_ui()

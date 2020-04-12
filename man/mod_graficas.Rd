@@ -7,7 +7,7 @@
 \usage{
 mod_graficas_ui(id)
 
-mod_graficas_server(input, output, session)
+mod_graficas_server(input, output, session, react)
 }
 \arguments{
 \item{id}{shiny id}

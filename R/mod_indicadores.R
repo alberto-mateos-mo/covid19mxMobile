@@ -17,20 +17,23 @@ mod_indicadores_ui <- function(id){
   ns <- NS(id)
   tagList(
     shinyMobile::f7Card(
-      title = div(class = "col-xs-3", style = ("font-size: 20px; font-weight: bold; color: white"), icon("vial", "fa-2x"), "Casos confirmados."),
-      div(style = ("font-size: 50px; font-weight: bold;"),
+      title = div(class = "col-xs-3", style = ("font-size: 18px; font-weight: bold; color: white"), icon("vial", "fa-2x"), "Casos confirmados."),
+      outline = TRUE,
+      div(style = ("font-size: 40px; font-weight: bold;"),
           textOutput(ns("n_casos"))
       )
     ),
     shinyMobile::f7Card(
-      title = div(class = "col-xs-3", style = ("font-size: 20px; font-weight: bold; color: white"), icon("search", "fa-2x"), "Casos estimados por el modelo centinela."),
-      div(style = ("font-size: 50px; font-weight: bold;"),
+      title = div(class = "col-xs-3", style = ("font-size: 18px; font-weight: bold; color: white"), icon("search", "fa-2x"), "Casos estimados por el modelo centinela."),
+      outline = TRUE,
+      div(style = ("font-size: 40px; font-weight: bold;"),
           textOutput(ns("n_estim"))
       )
     ),
     shinyMobile::f7Card(
-      title = div(class = "col-xs-3", style = ("font-size: 20px; font-weight: bold; color: white"), icon("calculator", "fa-2x"), "Factor de corrección."),
-      div(style = ("font-size: 50px; font-weight: bold;"),
+      title = div(class = "col-xs-3", style = ("font-size: 18px; font-weight: bold; color: white"), icon("calculator", "fa-2x"), "Factor de corrección."),
+      outline = TRUE,
+      div(style = ("font-size: 40px; font-weight: bold;"),
           textOutput(ns("corrf"))
       )
     )
@@ -43,15 +46,15 @@ mod_indicadores_ui <- function(id){
 #' @export
 #' @keywords internal
     
-mod_indicadores_server <- function(input, output, session){
+mod_indicadores_server <- function(input, output, session, react){
   ns <- session$ns
   
   output$n_casos <- renderText({
-    scales::comma(nrow(casos_positivos))
+    scales::comma(nrow(react()))
   })
   
   output$n_estim <- renderText({
-    scales::comma(nrow(casos_positivos)*8.336687)
+    scales::comma(nrow(react())*8.336687)
   })
   
   output$corrf <- renderText({
