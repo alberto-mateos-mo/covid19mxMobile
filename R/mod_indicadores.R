@@ -54,11 +54,11 @@ mod_indicadores_server <- function(input, output, session, react){
   })
   
   output$n_estim <- renderText({
-    scales::comma(nrow(react())*8.336687)
+    scales::comma(nrow(react())*8.885342226)
   })
   
   output$corrf <- renderText({
-    round(8.336687, 2)
+    round(8.885342226, 2)
   })
 }
     
