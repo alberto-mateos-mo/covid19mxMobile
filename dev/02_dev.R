@@ -11,6 +11,7 @@ golem::add_module( name = "indicadores" )
 golem::add_module( name = "graficas" )
 golem::add_module( name = "mapa" )
 golem::add_module( name = "data" )
+golem::add_module( name = "tablas" )
 
 ## 2.2 Add dependencies
 

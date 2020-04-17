@@ -41,7 +41,8 @@ mod_data_server <- function(input, output, session){
     }
   })
   
-  return(datos)
+  return(list(datos = datos,
+              estado = reactive(input$estado)))
   
 }
     

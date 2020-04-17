@@ -54,7 +54,7 @@ mod_graficas_server <- function(input, output, session, react){
   
   casos_fecha <- reactive({
     
-    casos_fecha <- table(react()$fecha) %>% 
+    casos_fecha <- table(react$datos()$fecha) %>% 
       as.data.frame()
     
     casos_fecha <- janitor::clean_names(casos_fecha)
@@ -107,7 +107,7 @@ mod_graficas_server <- function(input, output, session, react){
   })
  
   output$casos_gen <- plotly::renderPlotly({
-    plotly::ggplotly(ggplot2::ggplot(react(), ggplot2::aes(genero, fill = genero))+
+    plotly::ggplotly(ggplot2::ggplot(react$datos(), ggplot2::aes(genero, fill = genero))+
                        ggplot2::geom_bar(position = "stack")+
                        ggplot2::geom_text(ggplot2::aes(y = (..count..)-((..count..)/8),label = scales::percent((..count..)/sum(..count..))), 
                                           stat = "count", colour = "black")+
@@ -127,7 +127,7 @@ mod_graficas_server <- function(input, output, session, react){
   })
   
   output$casos_edad <- plotly::renderPlotly({
-    plotly::ggplotly(ggplot2::ggplot(react())+
+    plotly::ggplotly(ggplot2::ggplot(react$datos())+
                        ggplot2::geom_bar(ggplot2::aes(edad), fill = "#189E83")+
                        ggplot2::labs(x = "Edad", y = "Casos")+
                        ggplot2::scale_x_continuous(breaks = seq(from = 0, to = 100, by = 10))+

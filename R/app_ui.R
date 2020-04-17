@@ -29,6 +29,11 @@ app_ui <- function() {
             mod_graficas_ui("graficas_ui_1")
           ),
           shinyMobile::f7Tab(
+            tabName = "Tablas",
+            icon = shinyMobile::f7Icon("table_badge_more", old = FALSE),
+            mod_tablas_ui("tablas_ui_1")
+          ),
+          shinyMobile::f7Tab(
             tabName = "Mapa",
             icon = shinyMobile::f7Icon("map", old = FALSE),
             mod_mapa_ui("mapa_ui_1")
