@@ -34,9 +34,9 @@ mod_tablas_server <- function(input, output, session, react){
  
   covid_edo <- reactive({
     covid_data %>% 
-      filter(resultado == "Positivo SARS-CoV-2") %>% 
-      filter(entidad_res == react$estado()) %>% 
-      group_by(municipio_res) %>% 
+      dplyr::filter(resultado == "Positivo SARS-CoV-2") %>% 
+      dplyr::filter(entidad_res == react$estado()) %>% 
+      dplyr::group_by(municipio_res) %>% 
       dplyr::summarise(casos = n())
   })
   
