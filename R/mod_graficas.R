@@ -62,7 +62,7 @@ mod_graficas_server <- function(input, output, session, react){
     names(casos_fecha) <- c("fecha", "freq")
     
     casos_fecha <- casos_fecha %>% 
-      dplyr::mutate(fecha = lubridate::dmy(fecha))
+      dplyr::mutate(fecha = lubridate::ymd(fecha))
     
     casos_fecha <- dplyr::arrange(casos_fecha, fecha)
     
