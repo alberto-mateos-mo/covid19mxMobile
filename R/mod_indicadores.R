@@ -36,6 +36,13 @@ mod_indicadores_ui <- function(id){
       div(style = ("font-size: 40px; font-weight: bold;"),
           textOutput(ns("corrf"))
       )
+    ),
+    shinyMobile::f7Card(
+      title = div(class = "col-xs-3", style = ("font-size: 18px; font-weight: bold; color: white"), icon("square", "fa-2x"), "Número de decesos."),
+      outline = TRUE,
+      div(style = ("font-size: 40px; font-weight: bold;"),
+          textOutput(ns("n_decesos"))
+      )
     )
   )
 }
@@ -59,6 +66,10 @@ mod_indicadores_server <- function(input, output, session, react){
   
   output$corrf <- renderText({
     round(8.885342226, 2)
+  })
+  
+  output$n_decesos <- renderText({
+    nrow(covid_data[covid_data$resultado == "Positivo SARS-CoV-2"&covid_data$fecha_def != "9999-99-99",])
   })
 }
     
