@@ -69,7 +69,7 @@ mod_indicadores_server <- function(input, output, session, react){
   })
   
   output$n_decesos <- renderText({
-    nrow(covid_data[covid_data$resultado == "Positivo SARS-CoV-2"&covid_data$fecha_def != "9999-99-99",])
+    scales::comma(nrow(covid_data[covid_data$resultado == "Positivo SARS-CoV-2"&covid_data$fecha_def != "9999-99-99",]))
   })
 }
     
