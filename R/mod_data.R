@@ -17,7 +17,7 @@ mod_data_ui <- function(id){
   ns <- NS(id)
   tagList(
     shinyMobile::f7SmartSelect(inputId = ns("estado"), label = "Estado:", 
-                               choices = c("NACIONAL", levels(casos_positivos$estado)),
+                               choices = c("NACIONAL", levels(as.factor(casos_positivos$estado))),
                                selected = c("NACIONAL"))
   )
 }
