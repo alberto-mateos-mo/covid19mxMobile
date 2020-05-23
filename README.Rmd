@@ -23,7 +23,7 @@ Este repositorio es una copia de [este otro](https://github.com/alberto-mateos-m
 
 Puedes consultar la app [aquí](https://davidmateos.shinyapps.io/covid19mxMobile/).
 
-Última actualización: 21/05/2020
+Última actualización: 22/05/2020
 
 Fuente:
 
