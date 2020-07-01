@@ -19,23 +19,23 @@ app_ui <- function() {
           id = "tabs",
           shinyMobile::f7Tab(
             tabName = "Indicadores", 
-            icon = shinyMobile::f7Icon("info", old = FALSE),
+            icon = shinyMobile::f7Icon("info"),
             active = TRUE,
             mod_indicadores_ui("indicadores_ui_1")
           ),
           shinyMobile::f7Tab(
             tabName = "Gráficos",
-            icon = shinyMobile::f7Icon("graph_square", old = FALSE),
+            icon = shinyMobile::f7Icon("graph_square"),
             mod_graficas_ui("graficas_ui_1")
           ),
           shinyMobile::f7Tab(
             tabName = "Tablas",
-            icon = shinyMobile::f7Icon("table_badge_more", old = FALSE),
+            icon = shinyMobile::f7Icon("table_badge_more"),
             mod_tablas_ui("tablas_ui_1")
           ),
           shinyMobile::f7Tab(
             tabName = "Mapa",
-            icon = shinyMobile::f7Icon("map", old = FALSE),
+            icon = shinyMobile::f7Icon("map"),
             mod_mapa_ui("mapa_ui_1")
           )
         )
