@@ -43,8 +43,7 @@ mod_mapa_server <- function(input, output, session){
                                                "<b>Edad mediana:</b>", round(edad_med,1), "<br/>",
                                                "<b>Casos masculinos:</b>", n_M, "<br/>",
                                                "<b>Casos femeninos:</b>", n_F
-                                ), 
-                                label = ~htmltools::htmlEscape(paste(casos, "casos"))) %>% 
+                                )) %>% 
       leaflet::addLegend('topright', pal = casosCol, values = mapa_data$casos_clase,
                          title = 'Número de casos',
                          opacity = 1)
