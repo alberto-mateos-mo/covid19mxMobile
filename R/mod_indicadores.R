@@ -70,9 +70,9 @@ mod_indicadores_server <- function(input, output, session, react){
   
   output$n_decesos <- renderText({
     if(react$estado() == "NACIONAL"){
-      scales::comma(nrow(covid_data[covid_data$resultado == "Positivo SARS-CoV-2"&covid_data$fecha_def != "9999-99-99",]))
+      scales::comma(nrow(covid_data[covid_data$resultado_lab == 1&covid_data$fecha_def != "9999-99-99",]))
     }else{
-      scales::comma(nrow(covid_data[covid_data$resultado == "Positivo SARS-CoV-2"&covid_data$fecha_def != "9999-99-99"&covid_data$entidad_res == react$estado(),])) 
+      scales::comma(nrow(covid_data[covid_data$resultado_lab == 1&covid_data$fecha_def != "9999-99-99"&covid_data$entidad_res == react$estado(),])) 
     }
   })
 }

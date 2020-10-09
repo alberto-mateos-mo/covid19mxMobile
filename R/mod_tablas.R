@@ -37,14 +37,14 @@ mod_tablas_server <- function(input, output, session, react){
     validate(need(react$estado() != "NACIONAL", "Selecciona un estado."))
     
     a <- covid_data %>% 
-      dplyr::filter(resultado == "Positivo SARS-CoV-2") %>% 
+      dplyr::filter(resultado_lab == 1) %>% 
       dplyr::filter(entidad_res == react$estado()) %>% 
       dplyr::group_by(municipio_res) %>% 
       dplyr::summarise(casos = dplyr::n()) %>% 
       dplyr::mutate(casos_estimados = round(casos*(104562/4524)))
     
     b <- covid_data %>% 
-      dplyr::filter(resultado == "Positivo SARS-CoV-2") %>% 
+      dplyr::filter(resultado_lab == 1) %>% 
       dplyr::filter(entidad_res == react$estado()) %>% 
       dplyr::filter(fecha_def != "9999-99-99") %>% 
       dplyr::group_by(municipio_res) %>% 
