@@ -18,7 +18,7 @@ contiene está diseñada para ser usada en dispositivos móviles.
 Puedes consultar la app
 [aquí](https://davidmateos.shinyapps.io/covid19mxMobile/).
 
-Última actualización: 2020-10-08 23:39:13
+Última actualización: 2020-10-26 22:57:28
 
 Fuente:
 
